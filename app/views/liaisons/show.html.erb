@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @liaison.name %>
+</p>
+
+<p>
+  <strong>Relation:</strong>
+  <%= @liaison.relation %>
+</p>
+
+<%= link_to 'Edit', edit_liaison_path(@liaison) %> |
+<%= link_to 'Back', liaisons_path %>

@@ -1,0 +1,27 @@
+<h1>Listing liaisons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Relation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @liaisons.each do |liaison| %>
+      <tr>
+        <td><%= liaison.name %></td>
+        <td><%= liaison.relation %></td>
+        <td><%= link_to 'Show', liaison %></td>
+        <td><%= link_to 'Edit', edit_liaison_path(liaison) %></td>
+        <td><%= link_to 'Destroy', liaison, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Liaison', new_liaison_path %>

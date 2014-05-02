@@ -1,0 +1,25 @@
+<%= form_for(@lovedin) do |f| %>
+  <% if @lovedin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lovedin.errors.count, "error") %> prohibited this lovedin from being saved:</h2>
+
+      <ul>
+      <% @lovedin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :birth %><br>
+    <%= f.date_select :birth %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

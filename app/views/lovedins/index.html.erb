@@ -1,0 +1,27 @@
+<h1>Listing lovedins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birth</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lovedins.each do |lovedin| %>
+      <tr>
+        <td><%= lovedin.name %></td>
+        <td><%= lovedin.birth %></td>
+        <td><%= link_to 'Show', lovedin %></td>
+        <td><%= link_to 'Edit', edit_lovedin_path(lovedin) %></td>
+        <td><%= link_to 'Destroy', lovedin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lovedin', new_lovedin_path %>

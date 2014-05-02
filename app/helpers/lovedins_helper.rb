@@ -1,0 +1,2 @@
+module LovedinsHelper
+end

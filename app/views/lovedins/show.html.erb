@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lovedin.name %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @lovedin.birth %>
+</p>
+
+<%= link_to 'Edit', edit_lovedin_path(@lovedin) %> |
+<%= link_to 'Back', lovedins_path %>
